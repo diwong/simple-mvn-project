@@ -14,5 +14,6 @@ public class AlbumTest {
         album.setId(13L);
         assertThat(album.getName()).isEqualTo("Rumours");
         assertThat(album.getId()).isEqualTo(13L);
+        assertThat(album.getId()).isEqualTo(40L);
     }
 }
