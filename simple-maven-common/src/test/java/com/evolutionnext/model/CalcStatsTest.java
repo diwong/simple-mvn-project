@@ -15,7 +15,7 @@ public class CalcStatsTest {
 
     @Test
     public void testMinimumValueWithNoElements () {
-        List<Integer> integers = new ArrayList<>();
+        List<Integer> integers = new ArrayList<Integer>();
         CalcStats calcStats = new CalcStats(integers);
         assertNull(calcStats.getMinimum());
     }
