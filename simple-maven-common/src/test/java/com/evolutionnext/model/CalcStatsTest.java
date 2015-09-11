@@ -22,7 +22,7 @@ public class CalcStatsTest {
 
     @Test
     public void testMinimumValueWithOneElement () {
-        List<Integer> integers = new ArrayList<>();
+        List<Integer> integers = new ArrayList<Integer>();
         integers.add(5);
         CalcStats calcStats = new CalcStats(integers);
         assertEquals(new Integer(5), calcStats.getMinimum());
