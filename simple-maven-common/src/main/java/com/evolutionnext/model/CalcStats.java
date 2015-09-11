@@ -1,5 +1,6 @@
 package com.evolutionnext.model;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -14,9 +15,15 @@ public class CalcStats {
     }
 
     public Integer getMinimum() {
-        if (list.size() == 0)
+        if (list == null || list.size() == 0)
             return null;
 
-        return 5;
+        return Collections.min(list);
+
+        //int min = list.get(0);
+        //for (Integer elem: list) {
+        //    if (elem != null && elem < min) min = elem;
+        //}
+        //return min;
     }
 }

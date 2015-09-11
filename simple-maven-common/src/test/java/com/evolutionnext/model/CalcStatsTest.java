@@ -27,4 +27,40 @@ public class CalcStatsTest {
         CalcStats calcStats = new CalcStats(integers);
         assertEquals(new Integer(5), calcStats.getMinimum());
     }
+
+    @Test
+    public void testMinimumValueWithTwoElements () {
+        List<Integer> integers = new ArrayList<Integer>();
+        integers.add(5);
+        integers.add(-10);
+        CalcStats calcStats = new CalcStats(integers);
+        assertEquals(new Integer(-10), calcStats.getMinimum());
+    }
+
+    @Test
+    public void testMultipleElementsWithSameValue () {
+        List<Integer> integers = new ArrayList<Integer>();
+        integers.add(5);
+        integers.add(10);
+        integers.add(5);
+        integers.add(5);
+        CalcStats calcStats = new CalcStats(integers);
+        assertEquals(new Integer(5), calcStats.getMinimum());
+    }
+
+    @Test
+    public void testNullSequence () {
+        CalcStats calcStats = new CalcStats(null);
+        assertNull(calcStats.getMinimum());
+    }
+
+//    @Test
+//    public void testSequenceWithNullElement () {
+//        List<Integer> integers = new ArrayList<Integer>();
+//        integers.add(5);
+//        integers.add(null);
+//        integers.add(10);
+//        CalcStats calcStats = new CalcStats(integers);
+//        assertNull(calcStats.getMinimum());
+//    }
 }
