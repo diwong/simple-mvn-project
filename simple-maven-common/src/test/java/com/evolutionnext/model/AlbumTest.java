@@ -1,6 +1,5 @@
 package com.evolutionnext.model;
 
-import com.evolutionnext.model.Album;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
